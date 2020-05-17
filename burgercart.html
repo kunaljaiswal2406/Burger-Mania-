@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burgers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+     <!-- Jquery and extenal JS -->
+  <script src = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js></script>
+
+
+  <!-- external files : bootstrap -->
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous" async></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous" async></script>
+
+    <script src="orderCart.js" async></script>
+  </head>
+  <body>
+    <div class="fixed-bg">
+    <div class="shopping-cart">
+      <!-- Title -->
+      <div class="title">
+        Burger Cart
+      </div>
+      <div class="textcart"> Choose your favorite burgers here</div>
+
+      <!-- Burger #1 -->
+      <div class="item">
+
+        <div class="image">
+          <img src="download.jfif" width="40px" height=40px />
+        </div>
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        <div class = "quantity"> Crispy Burger</div>
+
+        <div class="quantity">
+            <select id="category" class="category">
+                <option value="veg">Veg</option>
+                <option value="egg">Egg</option>
+                <option value="chicken">chicken</option>
+            </select>   
+            &emsp;&emsp;&emsp;&emsp;&emsp;
+            <a href="#" data-name="CrispySupreme" data-category="" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div>
+        
+      </div>
+
+      <!-- Burger #2 -->
+      <div class="item">
+        <div class="image">
+          <img src="download.jfif" width="40px" height=40px />
+        </div>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <div class = "quantity">    Surprise</div>
+        &emsp; &nbsp;
+        <div class="quantity">
+          <select id="category" class="category">
+              <option value="veg">Veg</option>
+              <option value="egg">Egg</option>
+              <option value="chicken">chicken</option>
+          </select>   
+          &emsp;&emsp;&emsp;&nbsp;&nbsp;
+          &emsp;
+          <a href="#" data-name="Surprise" data-category="" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+
+      </div>
+
+      <!-- Product #3 -->
+      <div class="item">
+        <div >
+          <img src="download.jfif" width="40px" height=40px />
+        </div>
+        &emsp;&emsp;&emsp;&emsp;
+        <div class = "quantity"> Whooper</div>
+        &emsp;
+        <div class="quantity">
+          <select id="category" class="category">
+              <option value="veg">Veg</option>
+              <option value="egg">Egg</option>
+              <option value="chicken">chicken</option>
+          </select>   
+          &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+          <a href="#" data-name="Whooper" data-category="" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+
+      </div>
+
+      <!-- burger 4 -->
+
+      <div class="item">
+
+        <div class="image">
+          <img src="download.jfif" width="40px" height=40px />
+        </div>
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        <div class = "quantity"> Chilli Cheese</div>
+        &nbsp;
+        <div class="quantity">
+          <select id="category" class="category">
+              <option value="veg">Veg</option>
+              <option value="egg">Egg</option>
+              <option value="chicken">chicken</option>
+          </select>   
+        &nbsp;&nbsp;
+          &emsp;&emsp;&emsp;&emsp;
+          <a href="#" data-name="ChilliCheese" data-category="" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+
+      </div>
+
+      <!-- burger 5 -->
+
+      <div class="item">
+
+        <div class="image">
+          <img src="download.jfif" width="40px" height=40px />
+        </div>
+        &emsp;&emsp;&emsp;&emsp; &nbsp;&nbsp;
+        <div class = "quantity">Tandoori Grill</div>
+
+        <div class="quantity">
+          <select id="category" class="category">
+              <option value="veg">Veg</option>
+              <option value="egg">Egg</option>
+              <option value="chicken">chicken</option>
+          </select>   
+          &emsp;&emsp;&emsp;&emsp;
+          &nbsp;&nbsp;&nbsp;
+          <a href="#" data-name="TandoorGrill" data-category="" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+      </div>
+      
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+          <table class="show-cart table">
+              
+          </table>
+          <div>Total price: <span class="total-cart"></span></div>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="place-order btn btn-primary">Place Order</button>
+          </div>
+      </div>
+      </div>
+    </div> 
+
+  </div>
+ 
+  </body>
+</html>

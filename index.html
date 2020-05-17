@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Mania</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <div class="fixed-bg">
+        <div class="centered"> --- Burger---  <br> ---Mania--- </div>
+    </div>
+    <div style="height:200px;"> 
+            <input type="text" class="phone" id="phone_no" placeholder="Enter Mobile number" />
+
+            <button class="button1" id="btn1" style="left: 60%;" onclick="validNumber()"> Submit </button>
+        </div>
+        <script>
+          
+            var PhoneNumber;
+            function validNumber() 
+            {
+                var x, text;
+                txtinput = document.getElementById("phone_no").value;
+                
+                var count = 0;
+                if(isNaN(txtinput))
+                alert("Please enter valid phone number");
+                else{
+                n = txtinput;
+                if (n >= 1) ++count;
+
+                while (n / 10 >= 1) 
+                {
+                    n /= 10;
+                    ++count;
+                }
+                if(count==10)
+                    document.location.href="burgercart.html";
+                else
+                    alert("Please enter valid phone number");
+                }        
+            }
+        </script>
+            
+</body>
+</html>
